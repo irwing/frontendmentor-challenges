@@ -1,0 +1,126 @@
+:root {
+  --soft_blue: hsl(215, 51%, 70%);
+  --cyan: hsl(178, 100%, 50%);
+  --blue_first: hsl(217, 54%, 11%);
+  --blue_second: hsl(216, 50%, 16%);
+  --blue_three: hsl(215, 32%, 27%);
+  --white: hsl(0, 0%, 100%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-size: 18px;
+  font-family: "Outfit", sans-serif;
+}
+a {
+  text-decoration: none;
+  color: var(--white);
+}
+a:hover {
+  color: var(--cyan);
+}
+
+body {
+  background-color: var(--blue_first);
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  padding: 0 20px;
+}
+
+.overview {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 5px;
+  background: hsl(178, 100%, 50%, 0.5);
+  border-radius: 0.5em;
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+.overview img {
+  width: 50px;
+  color: var(--white);
+}
+.card-image:hover .overview {
+  display: flex;
+  cursor: pointer;
+}
+
+.card {
+  background: var(--blue_second);
+  padding: 1.5em;
+  border-radius: 1em;
+  max-width: 320px;
+}
+.card-image {
+  position: relative;
+}
+.card-image > img {
+  width: 100%;
+  border-radius: 0.5em;
+}
+.card-title {
+  font-size: 1.2em;
+  font-weight: bold;
+  color: var(--white);
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
+.card-description {
+  font-size: 1em;
+  font-weight: lighter;
+  color: var(--soft_blue);
+  line-height: 1.5em;
+}
+.card-tags {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  color: var(--cyan);
+  font-size: 1em;
+}
+.card-tag-icon {
+  margin-right: 3px;
+  margin-bottom: -2px;
+}
+.card-footer {
+  border-top: 1px solid var(--soft_blue);
+  padding-top: 1em;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+.card-date {
+  color: var(--soft_blue);
+}
+.card-footer-avatar {
+  border: 2px solid var(--white);
+  border-radius: 50%;
+  width: 40px;
+  margin-right: 10px;
+}
+.card-footer-author {
+  font-size: 1em;
+  color: var(--soft_blue);
+}
+.card-footer-author a {
+  color: var(--white);
+  text-decoration: none;
+}
+.card-footer-author a:hover {
+  color: var(--cyan);
+}
