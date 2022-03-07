@@ -1,0 +1,136 @@
+:root {
+  --bright_orange: hsl(31, 77%, 52%);
+  --dark_cyan: hsl(184, 100%, 22%);
+  --very_dark_cyan: hsl(179, 100%, 13%);
+  --white: hsla(0, 0%, 100%, 0.75);
+  --light_gray: hsl(0, 0%, 95%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-size: 15px;
+  font-family: "Lexend Deca", sans-serif;
+}
+a {
+  text-decoration: none;
+  color: var(--white);
+}
+a:hover {
+  color: var(--cyan);
+}
+
+body {
+  background-color: var(--white);
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  padding: 0 20px;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  padding: 3em 2em;
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 3em 3em;
+  background: var(--dark_cyan);
+  align-items: stretch;
+}
+.section:first-child {
+  background: var(--bright_orange);
+  border-radius: 0.5em 0 0 0.5em;
+}
+.section:last-child {
+  background: var(--very_dark_cyan);
+  border-radius: 0 0.5em 0.5em 0;
+}
+.section img {
+  width: 80px;
+  height: auto;
+}
+.section h2 {
+  color: var(--white);
+  font-size: 3em;
+  padding: 0.7em 0 0.7em 0;
+  font-family: "Big Shoulders Display";
+  text-transform: uppercase;
+  font-weight: bold;
+}
+.section p {
+  margin: 0;
+  color: var(--light_gray);
+  line-height: 2em;
+  font-weight: lighter;
+  margin-bottom: 5em;
+}
+.section button {
+  background: var(--white);
+  color: var(--dark_cyan);
+  border: none;
+  padding: 1em;
+  border-radius: 4em;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  width: 150px;
+}
+.section:first-child button {
+  color: var(--bright_orange);
+}
+.section:last-child button {
+  color: var(--very_dark_cyan);
+}
+.section button:hover {
+  background: #fff;
+}
+
+@media screen and (max-width: 764px) {
+  .wrapper {
+    padding: 0;
+    height: auto;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  #feactures {
+  }
+  .container {
+    display: block;
+    flex-direction: column;
+    height: auto;
+  }
+  .section {
+    width: auto;
+    padding: 3em;
+  }
+  .section:first-child {
+    border-radius: 0.5em 0.5em 0 0;
+  }
+  .section:last-child {
+    border-radius: 0 0 0.5em 0.5em;
+  }
+  .section img {
+    width: 60px;
+  }
+  .section h2 {
+    font-size: 3em;
+    padding-bottom: 0em;
+  }
+  .section p {
+    font-size: 1em;
+    margin-bottom: 1.5em;
+    font-weight: lighter;
+  }
+}
